@@ -11,7 +11,6 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long taskId;
     private String taskTitle;
-    private Date startDate;
     private Date reminderDate;
     private Date dueDate;
     private String completionStatus;
@@ -24,7 +23,6 @@ public class Task {
     public Task(long taskId, String taskTitle, Date startDate, Date reminderDate, Date dueDate, String completionStatus, String details, long userID) {
         this.taskId = taskId;
         this.taskTitle = taskTitle;
-        this.startDate = startDate;
         this.reminderDate = reminderDate;
         this.dueDate = dueDate;
         this.completionStatus = completionStatus;
@@ -48,13 +46,6 @@ public class Task {
         this.taskTitle = taskTitle;
     }
 
-    public Date getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
-    }
 
     public Date getReminderDate() {
         return reminderDate;
@@ -101,7 +92,6 @@ public class Task {
         return "Task{" +
                 "taskId=" + taskId +
                 ", taskTitle='" + taskTitle + '\'' +
-                ", startDate=" + startDate +
                 ", reminderDate=" + reminderDate +
                 ", dueDate=" + dueDate +
                 ", completionStatus='" + completionStatus + '\'' +

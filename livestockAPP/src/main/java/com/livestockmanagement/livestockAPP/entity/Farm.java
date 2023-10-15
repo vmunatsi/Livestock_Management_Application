@@ -11,13 +11,13 @@ public class Farm {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long farmId;
     private String farmName;
-    private int userId;
+    private long userId;
     private long farmArea;
 
     public Farm() {
     }
 
-    public Farm(int farmId, String farmName, int userId, long farmArea) {
+    public Farm(Integer farmId, String farmName, Integer userId, long farmArea) {
         this.farmId = farmId;
         this.farmName = farmName;
         this.userId = userId;
@@ -40,7 +40,7 @@ public class Farm {
         this.farmName = farmName;
     }
 
-    public int getUserId() {
+    public long getUserId() {
         return userId;
     }
 
