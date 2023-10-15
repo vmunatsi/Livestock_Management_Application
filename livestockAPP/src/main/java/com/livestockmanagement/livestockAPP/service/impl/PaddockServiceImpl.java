@@ -1,10 +1,11 @@
-package com.livestockmanagement.livestockAPP.service;
+package com.livestockmanagement.livestockAPP.service.impl;
 
 import com.livestockmanagement.livestockAPP.entity.Paddock;
 import com.livestockmanagement.livestockAPP.repository.PaddockRepository;
+import com.livestockmanagement.livestockAPP.service.PaddockService;
 import org.springframework.stereotype.Service;
 @Service
-public class PaddockServiceImpl implements PaddockService{
+public class PaddockServiceImpl implements PaddockService {
     private final PaddockRepository paddockRepository;
 
     public PaddockServiceImpl(PaddockRepository paddockRepository) {

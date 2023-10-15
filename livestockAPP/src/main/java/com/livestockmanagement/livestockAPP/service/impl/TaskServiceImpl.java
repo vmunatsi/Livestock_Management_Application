@@ -1,11 +1,12 @@
-package com.livestockmanagement.livestockAPP.service;
+package com.livestockmanagement.livestockAPP.service.impl;
 
 import com.livestockmanagement.livestockAPP.entity.Task;
 import com.livestockmanagement.livestockAPP.repository.TaskRepository;
+import com.livestockmanagement.livestockAPP.service.TaskService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TaskServiceImpl implements TaskService{
+public class TaskServiceImpl implements TaskService {
 
     private final TaskRepository taskRepository;
 

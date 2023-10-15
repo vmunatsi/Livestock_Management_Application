@@ -1,16 +1,17 @@
-package com.livestockmanagement.livestockAPP.service;
+package com.livestockmanagement.livestockAPP.service.impl;
 
 import com.livestockmanagement.livestockAPP.entity.Farm;
 import com.livestockmanagement.livestockAPP.exception.FarmAlreadyExistException;
 import com.livestockmanagement.livestockAPP.exception.ResourceNotFoundException;
 import com.livestockmanagement.livestockAPP.repository.FarmRepository;
+import com.livestockmanagement.livestockAPP.service.FarmService;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class FarmServiceImpl implements FarmService{
+public class FarmServiceImpl implements FarmService {
     private final FarmRepository farmRepository;
 
     public FarmServiceImpl(FarmRepository farmRepository) {
