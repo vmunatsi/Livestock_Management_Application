@@ -28,7 +28,7 @@ public class FarmController {
     public ResponseEntity<Farm> getFarmById(@PathVariable("id") Long id){
         return  new ResponseEntity<>(farmService.getFarmById(id), HttpStatus.FOUND);
     }
-    @PutMapping("farm/{id}")
+    @PutMapping("/farm/{id}")
     public ResponseEntity <Farm> updateFarmById (@RequestBody Farm farm,@PathVariable("id") Long id){
         return new ResponseEntity<>(farmService.updateFarmById(farm, id), HttpStatus.OK);
     }

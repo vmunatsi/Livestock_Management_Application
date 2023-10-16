@@ -12,9 +12,23 @@ public class LiveStockManagementExceptionHandler {
         LiveStockManagementException liveStockManagementException = new LiveStockManagementException(farmAlreadyExistException.getMessage(), farmAlreadyExistException.getCause(), HttpStatus.FOUND);
         return new ResponseEntity<>(liveStockManagementException, HttpStatus.FOUND);
     }
+
+    @ExceptionHandler(value = {PaddockAlreadyExistException.class})
+    public ResponseEntity<Object> handlePaddockAlreadyExistException(PaddockAlreadyExistException paddockAlreadyExistException) {
+        LiveStockManagementException liveStockManagementException = new LiveStockManagementException(
+                paddockAlreadyExistException.getMessage(),
+                paddockAlreadyExistException.getCause(),
+                HttpStatus.FOUND);
+        return new ResponseEntity<>(liveStockManagementException, HttpStatus.FOUND);
+    }
+
     @ExceptionHandler (value = {ResourceNotFoundException.class})
     public ResponseEntity<Object> handleResourceNotFoundException(ResourceNotFoundException resourceNotFoundException){
-        LiveStockManagementException liveStockManagementException = new LiveStockManagementException(resourceNotFoundException.getMessage(), resourceNotFoundException.getCause(), HttpStatus.NOT_FOUND);
+        LiveStockManagementException liveStockManagementException = new LiveStockManagementException(
+                resourceNotFoundException.getMessage(),
+                resourceNotFoundException.getCause(),
+                HttpStatus.NOT_FOUND);
         return new ResponseEntity<>(resourceNotFoundException, HttpStatus.NOT_FOUND);
+
     }
 }
